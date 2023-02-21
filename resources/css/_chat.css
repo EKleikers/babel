@@ -1,0 +1,199 @@
+/* css for chat window */
+/* bottom element with height, width 400max 350 min, flex-end */
+:root{
+    --chat-background: #f8f8f8;
+    --chat-message-border: #ebe9f1;
+    --chat-box-shadow:rgba(24, 24, 24, 0.25);
+    --chat-message-hover:#f3f2f7;
+}
+.dark-layout:root{
+    --chat-background: #283046;
+    --chat-message-border: #3b4253;
+    --chat-box-shadow:rgba(255, 255, 255, 0.2);
+    --chat-message-hover:#37425e;
+    ;
+}
+.chat-window {
+    transition: all 0.3s ease 0s;
+    border-top-right-radius: 16px;
+    border-top-left-radius: 16px;
+    cursor: pointer;
+    width: 400px;
+    min-width: 350px;
+    margin-right: 20px;
+    box-shadow: var(--chat-box-shadow) 0px 0px 15px, var(--chat-box-shadow) 0px 0px 3px 1px;
+    background: #7367f0;
+    z-index: 99;
+    place-self: flex-end;
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-window:not(.expanded):hover {
+    height: 60px;
+}
+
+.chat-container {
+    /* height: 53px; */
+    backface-visibility: hidden;
+    position: fixed !important;
+    right: 0px;
+    left: 0px;
+    bottom: 0px;
+    -ms-flex-align: stretch;
+    -ms-flex-direction: column;
+    -ms-flex-negative: 0;
+    -ms-flex-preferred-size: auto;
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -webkit-box-direction: normal;
+    -webkit-box-orient: vertical;
+    -webkit-flex-basis: auto;
+    -webkit-flex-direction: column;
+    -webkit-flex-shrink: 0;
+    align-items: stretch;
+    border: 0 solid black;
+    box-sizing: border-box;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-basis: auto;
+    flex-direction: column;
+    flex-shrink: 0;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    min-height: 0px;
+    min-width: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px;
+    z-index: 99999;
+    transition: all 0.3s ease 0s;
+}
+
+.chat-window-title {
+    display:flex;
+    overflow-wrap: break-word;
+    min-width: 0px;
+    -webkit-box-pack: center;
+    justify-content: center;
+    padding-left: 16px;
+    padding-top: 16px;
+    min-height: 53px;
+    border-bottom: 1px solid var(--chat-message-border);
+}
+
+.chat-window-title h2 {
+    flex: auto;
+    font-weight: 800;
+    line-height: 24px;
+    font-size: 20px;
+    color: rgb(233, 233, 233);
+    margin-bottom: 0;
+}
+.chat-window-content{
+    max-height: 400px;
+    overflow-y: auto;
+    transition: all 0.3s ease 0s;
+}
+.chat-window-content ul{
+    padding-left:0;
+    margin-bottom: 0px;
+}
+.chat-window-content ul li{
+    list-style-type:none;
+    width:100%;
+    transition: opacity 0.3s ease-out 0s;
+}
+.chat-window-content ul li.messageContainer{
+    position: relative;
+    padding-left: 16px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(217, 217, 217, 1.00);
+    -webkit-box-direction: normal;
+    -webkit-box-orient: horizontal;
+    flex-direction: row;
+    background-color:var(--chat-background);
+    border-color: var(--chat-message-border);
+}
+.chat-window-content ul li.messageContainer img{
+    height: 53px;
+    flex-basis: 48px;
+    margin-right:12px;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    border-radius: 9999px;
+    overflow: hidden;
+}
+.messageContainer:hover{
+    background-color: var(--chat-message-hover)!important;
+}
+.messageContainer div.message{
+    display:inline-block;
+    vertical-align: middle
+}
+.messageContainer div.message span{
+    float: left;
+    clear: left;
+}
+
+.messageContainer .badge{
+    position: absolute;
+    transform: translateX(-8px);
+}
+.chat-window-details{
+    height: 400px;
+    background: var(--chat-background);
+    padding:16px;
+}
+.closeWindow{
+    color: rgb(233, 233, 233);
+    margin-right: 16px;
+}
+
+
+/* views.news */
+
+.news .card-img-top {
+    width: 100%;
+    height: 15vw;
+    object-fit: cover;
+}
+
+.news .action-button {
+    margin: 5px;
+}
+
+.news .promotedTag{
+    position:absolute;
+    top:10px;
+    left:20px;
+    color:orange; 
+    font-weight: bold;
+}
+
+.news .news-card {
+    height: 43vw;
+}
+
+.news .card-text {
+    text-align: justify;
+    width: 100%;
+    margin: auto;
+}
+
+.news .button-row {
+    width: 95%;
+    position: absolute;
+    bottom: 1vh;
+}
+
+
+
+

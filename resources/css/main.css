@@ -1,0 +1,54 @@
+.logo {
+    max-width:100%;
+}
+
+.sidebar {
+    z-index:100;
+    margin-top: 124px;
+    margin-left: 20px;
+}
+
+.storage-status.mb-1.px-2 {
+    margin-top: 21px;
+}
+
+.blendercard {
+    padding-left:10px;
+    padding-right:10px;
+}
+
+.blenderimg {
+    display:block!important;
+}
+
+.margintop {
+    margin-top:14px;
+}
+
+.cart-quantity {
+    display:inline-block;
+    float:right;
+}
+
+.blockprice {
+    display: inline-block;
+}
+
+.cart-item-total {
+    display:inline-block;
+    float:right;
+}
+
+.checkoutmargin {
+    margin-top:124px;
+}
+
+body .content-detached.content-right.content-margin-top .content-body {
+    margin-top:120px;
+}
+
+section#basic-horizontal-layouts\ checkoutmargin {
+    margin-top:125px;
+}
+
+

@@ -1,0 +1,192 @@
+.parent {
+    padding: 20px;
+    height: 100%;
+  }
+  .info {
+    padding-left: 20px;
+  }
+  .wrapper {
+    padding: 10px;
+    width: 100%;
+    border: 1px solid lightgrey;
+    border-radius: 7px;
+  }
+  .ingredients {
+    background-color: white;
+    height: 900px;
+    border-radius: 7px;
+    padding-right: 50px;
+    overflow-y: scroll;
+  }
+
+  .ingredients>div,
+  .gu-mirror {
+    margin: 10px;
+    padding: 10px;
+    background-color: #f2f2f2;
+    transition: opacity 0.7s ease-in-out;
+    border-radius: 7px;
+  }
+  .ingredients>div {
+    cursor: move;
+    cursor: grab;
+    cursor: -moz-grab;
+    cursor: -webkit-grab;
+    border-radius: 7px;
+  }
+  .ingredient {
+    padding: 10px;
+    width: 100%;
+    margin: 5px;
+    display: inline-block;
+  }
+  .recipe-container {
+    margin: 10px 0px 10px 0px;
+    border: 1px solid lightgrey;
+    border-radius: 7px;
+  }
+  .recipe {
+    background-color: #f2f2f2 !important;
+    height: 45rem;
+    border: 1px solid lightgrey;
+    border-radius: 7px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    margin: 20px;
+  }
+  .recipe-name {
+    overflow-x: hidden;
+    overflow-y: auto;
+    margin-left: 20px;
+    width: 95%;
+  }
+  .recipe>.ingredient {
+    width: 97%;
+    flex-direction: row;
+    justify-content: space-between;
+    display: flex;
+  }
+  .recipe>.ingredient>.ingr-name>b {
+    display: none;
+  }
+  .recipe>.ingredient>.ingr-info {
+    width: fit-content;
+    display: flex !important;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 10px;
+  }
+  .recipe>.ingredient>.ingr-info>label {
+    padding-left: 1rem;
+    padding-right: 10px;
+    display: flex !important;
+    flex-direction: row;
+  }
+  .recipe>.ingredient>.ingr-info>.start {
+    position: relative;
+    display: inline-block !important;
+  }
+  .recipe>.ingredient>.ingr-info>.value {
+    padding-left: 1.5rem;
+    position: relative;
+    display: inline-block !important;
+  }
+  .recipe>.ingredient>.ingr-info>.duration {
+    position: relative;
+    display: inline-block !important;
+  }
+  .recipe>.ingredient>.ingr-info>.duration::after {
+    position: absolute;
+    right: 10px;
+    top: 1px;
+    content: attr(data-duration);
+    pointer-events: none;
+    opacity: 0.6;
+  }
+
+  .recipe>.ingredient>.ingr-info>.rate {
+    position: relative;
+    display: inline-block !important;
+  }
+  .recipe>.ingredient>.ingr-info>.rate::after {
+    position: absolute;
+    right: 10px;
+    top: 1px;
+    content: attr(data-rate);
+    pointer-events: none;
+    opacity: 0.6;
+  }
+  .recipe>.ingredient>.ingr-info>.value::after {
+    position: absolute;
+    right: 10px;
+    top: 1px;
+    content: attr(data-value);
+    pointer-events: none;
+    opacity: 0.6;
+  }
+
+  .recipe>div,
+  .gu-mirror {
+    margin: 10px;
+    padding: 10px;
+    transition: opacity 0.9s ease-in-out;
+    border-radius: 7px;
+
+  }
+  .right {
+    float: left;
+    position: relative;
+    width: 40%;
+    margin-left: 5%;
+    height: 100%;
+    background-color: red;
+  }
+  #display {
+    background: #2d2d2d;
+    border: 10px solid #000000;
+    border-radius: 5px;
+    font-size: 2em;
+    color: white;
+    height: 100px;
+    min-width: 200px;
+    text-align: center;
+    padding: 1em;
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  @media only screen and (max-width: 1080px) {
+
+    .ingredients {
+      min-width: 170px;
+      padding-right: 20px;
+    }
+
+    .ingredients>div,
+    .gu-mirror {
+      margin: 5px;
+      padding: 10px;
+    }
+    .ingredients>.ingredient>.ingr-name>.avatar {
+      display: none;
+    }
+    .recipe-container {
+      margin: 5px 0px 5px 0px;
+      width: 100%;
+      min-width: 15rem;
+    }
+
+    .recipe>.ingredient>.ingr-info {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .recipe>.ingredient>.ingr-name {
+      width: 30vw;
+    }
+    .recipe>.ingredient>.ingr-info>.value {
+      padding-left: 0;
+    }
+    .recipe>.ingredient>.ingr-info>label {
+      margin-left: -15px;
+    }
+  }
