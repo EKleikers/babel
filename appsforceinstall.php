@@ -2,7 +2,7 @@
 
 return [
 
-    'ApplicationID' => '100001067',
+    'ApplicationID' => '100001075',
     'ApplicationName' => 'Babel-ai',
     'Icon' => 'fal fa-flask',
     'Sort' => '15',
